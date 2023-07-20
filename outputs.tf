@@ -1,7 +1,7 @@
 output "instance_ami" {
-  value = aws_instance.web.ami[0]
+  value = aws_instance.web.ami
 }
 
 output "instance_arn" {
-  value = aws_instance.web.arn[0]
+  value = aws_instance.web.arn
 }
