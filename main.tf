@@ -19,10 +19,10 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
-  vpc_security_group_ids = [aws_security_group.web.id]
+  vpc_security_group_ids = [module.web_sg.security_group_id]
 
   tags = {
-    name = "web"
-    env  = "dev"
+    Name = "web"
+    Env  = "dev"
   }
 }
